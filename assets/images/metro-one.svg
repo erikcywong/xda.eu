@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="XDAO Metro One step-through electric bicycle illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1216"/>
+      <stop offset="0.55" stop-color="#101a20"/>
+      <stop offset="1" stop-color="#060a0d"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7eee9"/>
+      <stop offset="0.5" stop-color="#8fa49c"/>
+      <stop offset="1" stop-color="#d8e4dd"/>
+    </linearGradient>
+    <linearGradient id="battery" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00a65a"/>
+      <stop offset="1" stop-color="#00e676"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1c2a2e" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <rect width="800" height="520" fill="url(#grid)"/>
+  <circle cx="400" cy="270" r="190" fill="#00e676" opacity="0.035"/>
+  <path d="M0 462H800" stroke="#24343a" stroke-width="2"/>
+  <text x="42" y="64" fill="#00e676" font-family="monospace" font-size="13" letter-spacing="3">XDAO / URBAN 01</text>
+  <text x="42" y="90" fill="#7d8e8b" font-family="monospace" font-size="11" letter-spacing="2">STEP-THROUGH · EAPC 250W</text>
+
+  <!-- wheels -->
+  <g fill="none">
+    <circle cx="210" cy="355" r="92" stroke="#d9e4df" stroke-width="9"/>
+    <circle cx="210" cy="355" r="78" stroke="#26353a" stroke-width="3"/>
+    <circle cx="610" cy="355" r="92" stroke="#d9e4df" stroke-width="9"/>
+    <circle cx="610" cy="355" r="78" stroke="#26353a" stroke-width="3"/>
+    <g stroke="#5c706c" stroke-width="1.2" opacity="0.65">
+      <path d="M210 263V447M118 355H302M147 292L273 418M147 418L273 292"/>
+      <path d="M610 263V447M518 355H702M547 292L673 418M547 418L673 292"/>
+    </g>
+    <path d="M118 345A92 92 0 0 1 287 312" stroke="#00e676" stroke-width="4" opacity="0.65"/>
+    <path d="M525 312A92 92 0 0 1 694 345" stroke="#00e676" stroke-width="4" opacity="0.65"/>
+  </g>
+  <circle cx="610" cy="355" r="21" fill="#101a1e" stroke="#00e676" stroke-width="4"/>
+  <circle cx="210" cy="355" r="9" fill="#b8c8c1"/>
+
+  <!-- frame -->
+  <g stroke="url(#frame)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M610 355L505 175" stroke-width="10"/>
+    <path d="M505 175L500 132M470 132H536" stroke-width="7"/>
+    <path d="M505 175L438 300L390 355" stroke-width="11"/>
+    <path d="M438 300L470 222L505 175" stroke-width="9"/>
+    <path d="M470 222L438 300" stroke-width="7"/>
+    <path d="M390 355L210 355" stroke-width="9"/>
+    <path d="M470 222L210 355" stroke-width="8"/>
+    <path d="M470 222L455 178" stroke-width="7"/>
+  </g>
+  <path d="M438 172H490L486 184H442Z" fill="#dce8e2"/>
+  <path d="M426 166C440 156 478 156 492 166C480 176 438 176 426 166Z" fill="url(#frame)"/>
+  <rect x="382" y="348" width="16" height="14" rx="5" fill="#00e676"/>
+
+  <!-- integrated battery -->
+  <g transform="rotate(-60 448 260)">
+    <rect x="415" y="236" width="126" height="30" rx="10" fill="#0b1316" stroke="#32464b" stroke-width="2"/>
+    <rect x="421" y="242" width="112" height="18" rx="7" fill="url(#battery)"/>
+    <circle cx="523" cy="251" r="3" fill="#062017"/>
+  </g>
+  <text x="300" y="247" fill="#00e676" font-family="monospace" font-size="12" letter-spacing="1">504Wh</text>
+  <path d="M350 253L408 272" stroke="#00e676" stroke-width="1" opacity="0.6"/>
+  <text x="622" y="332" fill="#7d8e8b" font-family="monospace" font-size="11">45 Nm HUB</text>
+  <path d="M630 338L618 352" stroke="#7d8e8b" stroke-width="1" opacity="0.7"/>
+  <circle cx="610" cy="355" r="34" fill="none" stroke="#00e676" stroke-width="1.5" opacity="0.35" filter="url(#glow)"/>
+</svg>

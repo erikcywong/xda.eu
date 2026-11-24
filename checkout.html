@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Demo | XDAO E-Bikes</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="siteHeaderMount"></div>
+  <main class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="cart.html">Basket</a><span>/</span><span>Checkout</span></div>
+    <section class="section-sm">
+      <span class="eyebrow">Demo checkout</span>
+      <h1 style="font-size:clamp(36px,5vw,56px);margin-top:14px">Delivery details.</h1>
+      <p class="lead" style="margin-top:12px">This prototype validates the purchase journey only. No card details are collected and no order is transmitted.</p>
+    </section>
+
+    <div class="checkout-layout">
+      <form id="checkoutForm">
+        <div class="form-card">
+          <h3>Contact</h3>
+          <div class="form-grid">
+            <label class="field"><span>First name</span><input class="input" name="firstName" required placeholder="Alex"></label>
+            <label class="field"><span>Last name</span><input class="input" name="lastName" required placeholder="Morgan"></label>
+            <label class="field full"><span>Email address</span><input class="input" type="email" name="email" required placeholder="alex@example.co.uk"></label>
+            <label class="field full"><span>Phone</span><input class="input" type="tel" name="phone" placeholder="07700 900123"></label>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>UK delivery address</h3>
+          <div class="form-grid">
+            <label class="field full"><span>Address line 1</span><input class="input" name="address1" required placeholder="12 Example Street"></label>
+            <label class="field full"><span>Address line 2</span><input class="input" name="address2" placeholder="Flat, suite, etc."></label>
+            <label class="field"><span>City</span><input class="input" name="city" required placeholder="London"></label>
+            <label class="field"><span>Postcode</span><input class="input" name="postcode" required placeholder="SW1A 1AA"></label>
+            <label class="field full"><span>Delivery notes</span><textarea class="input" name="notes" rows="3" placeholder="Preferred drop-off or access instructions"></textarea></label>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Delivery & confirmation</h3>
+          <div class="radio-list">
+            <label class="radio-item"><input type="radio" name="delivery" checked><span><strong>Free UK mainland delivery</strong><span>3–5 working days · 85% assembled on arrival</span></span></label>
+            <label class="radio-item"><input type="radio" name="delivery"><span><strong>Collection by arrangement</strong><span>For trade partners and local pickup</span></span></label>
+          </div>
+          <p class="form-note">Payment provider integration is a launch task. For now, submitting creates a local demo confirmation only.</p>
+          <button class="btn btn-primary btn-lg btn-block" style="margin-top:18px" type="submit">Place demo order</button>
+        </div>
+      </form>
+      <div id="checkoutSummary"></div>
+    </div>
+  </main>
+
+  <div id="confirmModal" class="modal-backdrop hidden">
+    <div class="modal">
+      <span class="eyebrow">Demo confirmation</span>
+      <h3 style="margin-top:14px">Journey complete.</h3>
+      <p>Your reference is <strong class="mono accent" id="confirmRef">XDAO-UK-000000</strong>. No payment was taken and no order was sent.</p>
+      <button class="btn btn-primary" id="confirmClose">Return home</button>
+    </div>
+  </div>
+
+  <div id="siteFooterMount"></div>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

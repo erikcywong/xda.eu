@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="XDAO Horizon X trekking electric bicycle illustration">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1014"/>
+      <stop offset="0.6" stop-color="#101a1e"/>
+      <stop offset="1" stop-color="#050809"/>
+    </linearGradient>
+    <linearGradient id="frame3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfe9e3"/>
+      <stop offset="0.5" stop-color="#82958e"/>
+      <stop offset="1" stop-color="#cddad2"/>
+    </linearGradient>
+    <linearGradient id="battery3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00a65a"/>
+      <stop offset="1" stop-color="#00e676"/>
+    </linearGradient>
+    <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1c2a2e" stroke-width="1" opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="520" fill="url(#bg3)"/>
+  <rect width="800" height="520" fill="url(#grid3)"/>
+  <path d="M0 462H800" stroke="#24343a" stroke-width="2"/>
+  <text x="42" y="64" fill="#00e676" font-family="monospace" font-size="13" letter-spacing="3">XDAO / TREKKING 03</text>
+  <text x="42" y="90" fill="#7d8e8b" font-family="monospace" font-size="11" letter-spacing="2">80 Nm MID-DRIVE · 80MM AIR FORK</text>
+
+  <g fill="none">
+    <circle cx="210" cy="350" r="95" stroke="#d9e4df" stroke-width="10" stroke-dasharray="14 6"/>
+    <circle cx="210" cy="350" r="79" stroke="#26353a" stroke-width="3"/>
+    <circle cx="610" cy="350" r="95" stroke="#d9e4df" stroke-width="10" stroke-dasharray="14 6"/>
+    <circle cx="610" cy="350" r="79" stroke="#26353a" stroke-width="3"/>
+    <g stroke="#5c706c" stroke-width="1.1" opacity="0.6">
+      <path d="M210 255V445M115 350H305M143 284L277 416M143 416L277 284"/>
+      <path d="M610 255V445M515 350H705M543 284L677 416M543 416L677 284"/>
+    </g>
+  </g>
+  <circle cx="610" cy="350" r="8" fill="#b8c8c1"/>
+
+  <!-- suspension fork -->
+  <g stroke-linecap="round">
+    <path d="M610 350L505 160" stroke="#dbe6df" stroke-width="10"/>
+    <path d="M572 272L542 219" stroke="#00e676" stroke-width="7"/>
+    <path d="M505 160L500 122M468 122H540" stroke="#dbe6df" stroke-width="7"/>
+  </g>
+
+  <g stroke="url(#frame3)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M505 160L390 350L455 205Z" stroke-width="11"/>
+    <path d="M505 160L455 205" stroke-width="8"/>
+    <path d="M390 350L210 350" stroke-width="9"/>
+    <path d="M455 205L210 350" stroke-width="8"/>
+    <path d="M390 350L455 205L492 158" stroke-width="7"/>
+    <path d="M455 205L440 160" stroke-width="7"/>
+  </g>
+  <path d="M430 150H480L476 163H434Z" fill="#dce8e2"/>
+  <path d="M418 146C432 136 472 136 486 146C473 157 431 157 418 146Z" fill="url(#frame3)"/>
+
+  <!-- mid drive motor -->
+  <circle cx="390" cy="350" r="27" fill="#0b1316" stroke="#00e676" stroke-width="5"/>
+  <circle cx="390" cy="350" r="10" fill="#00e676" opacity="0.85"/>
+  <g transform="rotate(-62 450 260)">
+    <rect x="413" y="229" width="132" height="34" rx="10" fill="#0b1316" stroke="#32464b" stroke-width="2"/>
+    <rect x="420" y="236" width="118" height="20" rx="7" fill="url(#battery3)"/>
+  </g>
+  <path d="M300 238L410 263" stroke="#00e676" stroke-width="1" opacity="0.6"/>
+  <text x="272" y="232" fill="#00e676" font-family="monospace" font-size="12" letter-spacing="1">720Wh</text>
+  <path d="M455 205H550L590 350" stroke="#8fa49c" stroke-width="5" fill="none" stroke-dasharray="6 4"/>
+  <text x="620" y="325" fill="#7d8e8b" font-family="monospace" font-size="11">MID-DRIVE 80 Nm</text>
+</svg>

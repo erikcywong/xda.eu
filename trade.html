@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="XDAO UK trade portal — wholesale MOQs, container planning and distributor enquiry.">
+  <title>Trade & Distribution | XDAO UK</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="siteHeaderMount"></div>
+  <main>
+    <section class="section-sm section-alt">
+      <div class="container">
+        <span class="eyebrow">B2B portal</span>
+        <h1 style="font-size:clamp(38px,5vw,62px);margin-top:16px">Stock XDAO. Build the network.</h1>
+        <p class="lead" style="margin-top:14px">Wholesale terms, container loading and spare-parts support for UK dealers, fleet operators and distribution partners. The calculator below uses figures from the supplied XDAO specification sheet.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="notice notice-warn">Commercial figures shown here are source-catalog estimates (FOB Ningbo and landed UK DDP). Confirm final pricing, duties and Incoterms before issuing a proforma invoice.</div>
+
+        <div class="calc-grid" id="tradeCalc" style="margin-top:24px">
+          <div>
+            <div class="section-head"><div><span class="eyebrow">Step 01</span><h2 class="section-title">Build your allocation.</h2></div></div>
+            <div class="calc-model"><div><strong>XDAO Metro One</strong><span>$640 FOB · £565 DDP · MOQ 30 · 148 / 40'HQ</span></div><input type="number" data-calc-id="metro-one" value="30" min="0" step="10"></div>
+            <div class="calc-model"><div><strong>XDAO Strada Pro</strong><span>$790 FOB · £695 DDP · MOQ 30 · 156 / 40'HQ</span></div><input type="number" data-calc-id="strada-pro" value="30" min="0" step="10"></div>
+            <div class="calc-model"><div><strong>XDAO Horizon X</strong><span>$960 FOB · £845 DDP · MOQ 25 · 126 / 40'HQ</span></div><input type="number" data-calc-id="horizon-x" value="25" min="0" step="5"></div>
+            <div class="calc-model"><div><strong>XDAO Carrier LT</strong><span>$1,080 FOB · £950 DDP · MOQ 20 · 110 / 40'HQ</span></div><input type="number" data-calc-id="carrier-lt" value="20" min="0" step="5"></div>
+
+            <div class="form-card" style="margin-top:24px">
+              <h3>Distributor enquiry</h3>
+              <form data-demo-form>
+                <div class="form-grid">
+                  <label class="field"><span>Company name *</span><input class="input" required placeholder="GB E-Mobility Ltd"></label>
+                  <label class="field"><span>VAT / EORI number</span><input class="input" placeholder="GB123456789000"></label>
+                  <label class="field"><span>Work email *</span><input class="input" type="email" required placeholder="purchasing@company.co.uk"></label>
+                  <label class="field"><span>Destination port</span><select class="select"><option>Felixstowe</option><option>Southampton</option><option>London Gateway</option><option>Liverpool Seaforth</option></select></label>
+                </div>
+                <button class="btn btn-primary btn-block" style="margin-top:18px" type="submit">Generate demo enquiry</button>
+              </form>
+            </div>
+          </div>
+
+          <aside class="summary-card">
+            <span class="eyebrow">Live estimate</span><h3 style="margin-top:12px">Container summary</h3>
+            <div class="calc-output">
+              <div><span>FOB Ningbo</span><strong id="calcFob">$0</strong></div>
+              <div><span>Landed UK DDP</span><strong id="calcDdp">£0</strong></div>
+              <div><span>Total units</span><strong id="calcUnits">0 units</strong></div>
+              <div><span>Production lead</span><strong>35–45 days</strong></div>
+            </div>
+            <div class="summary-row"><span>40'HQ utilisation</span><strong id="calcFillLabel">0%</strong></div>
+            <div class="fillbar" style="margin-top:10px"><div id="calcFillBar"></div></div>
+            <p class="form-note">Usable 40'HQ capacity estimated at 70 CBM. Mixed allocations are calculated from per-unit carton volume.</p>
+            <div class="detail-assurance" style="margin-top:20px">
+              <div><strong>MOQ tiers</strong>20–30 units per model</div>
+              <div><strong>Spare parts</strong>3% FOC allocation</div>
+              <div><strong>Packing</strong>85% SKD · 7-ply cartons</div>
+              <div><strong>Documents</strong>UKCA · UN38.3</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Trade advantages</span><h2 class="section-title">Built for margin and service.</h2></div></div>
+        <div class="grid grid-3">
+          <div class="form-card"><span class="badge">01</span><h3 style="margin-top:14px">0% anti-dumping eligibility</h3><p style="margin-top:8px">Rigid non-folding frames use HMRC additional code 8100 under commodity code 8711 60 10 00, subject to standard UKGT duty. Confirm classification with your broker.</p></div>
+          <div class="form-card"><span class="badge">02</span><h3 style="margin-top:14px">2-year commercial warranty</h3><p style="margin-top:8px">Coverage for frames, motors, batteries and controllers, backed by direct UK RMA spare-parts replacement support.</p></div>
+          <div class="form-card"><span class="badge">03</span><h3 style="margin-top:14px">OEM / ODM slots</h3><p style="margin-top:8px">2027/28 Great Britain production slots and private-label options available subject to volume and compliance review.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="siteFooterMount"></div>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

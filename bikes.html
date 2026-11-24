@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare all four XDAO UK electric bikes: Metro One, Strada Pro, Horizon X and Carrier LT.">
+  <title>All E-Bikes | XDAO UK</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="siteHeaderMount"></div>
+  <main>
+    <section class="section-sm section-alt">
+      <div class="container">
+        <span class="eyebrow">UK lineup · 2026</span>
+        <h1 style="font-size:clamp(38px,5vw,62px);margin-top:16px">Find your XDAO.</h1>
+        <p class="lead" style="margin-top:14px">Every model is a legal 250W EAPC with a rigid non-folding frame, UK charger and a two-year warranty. Filter by how you ride.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filters">
+          <button class="filter-btn active" data-category="all">All bikes</button>
+          <button class="filter-btn" data-category="urban">Urban</button>
+          <button class="filter-btn" data-category="trekking">Trekking</button>
+          <button class="filter-btn" data-category="cargo">Cargo</button>
+          <div class="search-box"><input class="input" id="productSearch" type="search" placeholder="Search motor, battery, use case…"></div>
+          <select class="select" id="productSort" style="max-width:180px">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+
+        <div class="product-grid" data-product-grid data-filterable></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Side by side</span><h2 class="section-title">Technical comparison.</h2></div>
+          <p>Figures below come from the XDAO UK B2B specification sheet. Retail prices are indicative and subject to final confirmation.</p>
+        </div>
+        <div style="overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-lg)">
+          <table class="spec-table" style="min-width:900px">
+            <thead><tr style="background:var(--surface-2)"><th>Model</th><th>Best for</th><th>Motor</th><th>Battery</th><th>Range</th><th>Weight</th><th style="text-align:right">Price</th></tr></thead>
+            <tbody>
+              <tr><th>Metro One</th><td>Urban commuting</td><td>250W hub · 45 Nm</td><td>504Wh</td><td>88 km</td><td>21.5 kg</td><td style="text-align:right;color:var(--accent);font-weight:700" data-price-id="metro-one">£1,199</td></tr>
+              <tr><th>Strada Pro</th><td>City & fitness</td><td>250W hub · 65 Nm</td><td>540Wh</td><td>105 km</td><td>19.8 kg</td><td style="text-align:right;color:var(--accent);font-weight:700" data-price-id="strada-pro">£1,499</td></tr>
+              <tr><th>Horizon X</th><td>Trekking & SUV</td><td>250W mid · 80 Nm</td><td>720Wh</td><td>130 km</td><td>24.2 kg</td><td style="text-align:right;color:var(--accent);font-weight:700" data-price-id="horizon-x">£1,849</td></tr>
+              <tr><th>Carrier LT</th><td>Cargo & fleet</td><td>250W hub · 85 Nm</td><td>840Wh</td><td>112 km</td><td>28.5 kg</td><td style="text-align:right;color:var(--accent);font-weight:700" data-price-id="carrier-lt">£2,099</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="siteFooterMount"></div>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

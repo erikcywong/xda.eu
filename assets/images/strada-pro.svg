@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="XDAO Strada Pro diamond frame electric bicycle illustration">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1015"/>
+      <stop offset="0.6" stop-color="#111b20"/>
+      <stop offset="1" stop-color="#05090c"/>
+    </linearGradient>
+    <linearGradient id="frame2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0f4f1"/>
+      <stop offset="0.45" stop-color="#90a49c"/>
+      <stop offset="1" stop-color="#dbe6df"/>
+    </linearGradient>
+    <linearGradient id="battery2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00a65a"/>
+      <stop offset="1" stop-color="#00e676"/>
+    </linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1c2a2e" stroke-width="1" opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="520" fill="url(#bg2)"/>
+  <rect width="800" height="520" fill="url(#grid2)"/>
+  <circle cx="400" cy="270" r="190" fill="#00e676" opacity="0.03"/>
+  <path d="M0 462H800" stroke="#24343a" stroke-width="2"/>
+  <text x="42" y="64" fill="#00e676" font-family="monospace" font-size="13" letter-spacing="3">XDAO / URBAN 02</text>
+  <text x="42" y="90" fill="#7d8e8b" font-family="monospace" font-size="11" letter-spacing="2">DIAMOND FRAME · CARBON BELT DRIVE</text>
+
+  <g fill="none">
+    <circle cx="210" cy="352" r="94" stroke="#d9e4df" stroke-width="8"/>
+    <circle cx="210" cy="352" r="80" stroke="#26353a" stroke-width="3"/>
+    <circle cx="610" cy="352" r="94" stroke="#d9e4df" stroke-width="8"/>
+    <circle cx="610" cy="352" r="80" stroke="#26353a" stroke-width="3"/>
+    <g stroke="#5c706c" stroke-width="1.1" opacity="0.6">
+      <path d="M210 258V446M116 352H304M144 286L276 418M144 418L276 286"/>
+      <path d="M610 258V446M516 352H704M544 286L676 418M544 418L676 286"/>
+    </g>
+  </g>
+  <circle cx="610" cy="352" r="23" fill="#101a1e" stroke="#00e676" stroke-width="4"/>
+  <circle cx="210" cy="352" r="8" fill="#b8c8c1"/>
+
+  <g stroke="url(#frame2)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M610 352L505 168" stroke-width="9"/>
+    <path d="M505 168L500 126M470 126H540" stroke-width="7"/>
+    <path d="M505 168L390 352L455 210Z" stroke-width="10"/>
+    <path d="M505 168L455 210" stroke-width="8"/>
+    <path d="M390 352L210 352" stroke-width="8"/>
+    <path d="M455 210L210 352" stroke-width="7"/>
+    <path d="M390 352L455 210L490 165" stroke-width="7"/>
+  </g>
+  <path d="M444 157H494L489 170H449Z" fill="#dce8e2"/>
+  <path d="M431 152C446 142 485 142 500 152C487 163 444 163 431 152Z" fill="url(#frame2)"/>
+  <circle cx="390" cy="352" r="12" fill="#0d1519" stroke="#00e676" stroke-width="3"/>
+
+  <!-- clean integrated battery + belt line -->
+  <g transform="rotate(-60 450 260)">
+    <rect x="418" y="236" width="122" height="28" rx="9" fill="#0b1316" stroke="#32464b" stroke-width="2"/>
+    <rect x="424" y="242" width="108" height="16" rx="6" fill="url(#battery2)"/>
+  </g>
+  <path d="M390 352L610 352" stroke="#00e676" stroke-width="3" stroke-dasharray="9 5" opacity="0.8"/>
+  <text x="300" y="244" fill="#00e676" font-family="monospace" font-size="12" letter-spacing="1">540Wh</text>
+  <path d="M352 250L412 273" stroke="#00e676" stroke-width="1" opacity="0.6"/>
+  <text x="620" y="330" fill="#7d8e8b" font-family="monospace" font-size="11">65 Nm DUAL SENSOR</text>
+</svg>

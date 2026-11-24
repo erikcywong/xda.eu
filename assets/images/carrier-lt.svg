@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="XDAO Carrier LT longtail cargo electric bicycle illustration">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1013"/>
+      <stop offset="0.6" stop-color="#10191d"/>
+      <stop offset="1" stop-color="#050809"/>
+    </linearGradient>
+    <linearGradient id="frame4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e4ece7"/>
+      <stop offset="0.5" stop-color="#80938c"/>
+      <stop offset="1" stop-color="#cddad2"/>
+    </linearGradient>
+    <linearGradient id="battery4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00a65a"/>
+      <stop offset="1" stop-color="#00e676"/>
+    </linearGradient>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1c2a2e" stroke-width="1" opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="520" fill="url(#bg4)"/>
+  <rect width="800" height="520" fill="url(#grid4)"/>
+  <path d="M0 462H800" stroke="#24343a" stroke-width="2"/>
+  <text x="42" y="64" fill="#00e676" font-family="monospace" font-size="13" letter-spacing="3">XDAO / CARGO 04</text>
+  <text x="42" y="90" fill="#7d8e8b" font-family="monospace" font-size="11" letter-spacing="2">LONGTAIL UTILITY · 180 KG GROSS LOAD</text>
+
+  <g fill="none">
+    <circle cx="175" cy="362" r="82" stroke="#d9e4df" stroke-width="10"/>
+    <circle cx="175" cy="362" r="68" stroke="#26353a" stroke-width="3"/>
+    <circle cx="640" cy="362" r="82" stroke="#d9e4df" stroke-width="10"/>
+    <circle cx="640" cy="362" r="68" stroke="#26353a" stroke-width="3"/>
+    <g stroke="#5c706c" stroke-width="1.1" opacity="0.6">
+      <path d="M175 280V444M93 362H257M120 307L230 417M120 417L230 307"/>
+      <path d="M640 280V444M558 362H722M585 307L695 417M585 417L695 307"/>
+    </g>
+  </g>
+  <circle cx="640" cy="362" r="24" fill="#101a1e" stroke="#00e676" stroke-width="5"/>
+  <circle cx="175" cy="362" r="8" fill="#b8c8c1"/>
+
+  <g stroke="url(#frame4)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M640 362L505 172" stroke-width="10"/>
+    <path d="M505 172L500 130M470 130H540" stroke-width="7"/>
+    <path d="M505 172L385 362L455 214Z" stroke-width="11"/>
+    <path d="M505 172L455 214" stroke-width="8"/>
+    <path d="M385 362L175 362" stroke-width="9"/>
+    <path d="M455 214L175 362" stroke-width="8"/>
+    <path d="M385 362L455 214L490 168" stroke-width="7"/>
+    <path d="M455 214L440 168" stroke-width="7"/>
+    <path d="M455 214L575 214L640 362" stroke-width="8"/>
+    <path d="M385 362H640V292H500Z" stroke-width="7"/>
+  </g>
+  <path d="M430 158H480L476 171H434Z" fill="#dce8e2"/>
+  <path d="M418 154C432 144 472 144 486 154C473 165 431 165 418 154Z" fill="url(#frame4)"/>
+
+  <!-- long rear deck and dual battery -->
+  <rect x="470" y="200" width="210" height="18" rx="5" fill="url(#battery4)"/>
+  <path d="M470 200V180H680V200" stroke="#8fa49c" stroke-width="5" fill="none"/>
+  <g transform="rotate(-58 438 268)">
+    <rect x="408" y="246" width="104" height="26" rx="9" fill="#0b1316" stroke="#32464b" stroke-width="2"/>
+    <rect x="414" y="252" width="90" height="14" rx="6" fill="url(#battery4)"/>
+  </g>
+  <rect x="355" y="290" width="78" height="15" rx="5" fill="url(#battery4)" opacity="0.9"/>
+  <rect x="88" y="222" width="62" height="36" rx="5" fill="none" stroke="#8fa49c" stroke-width="4"/>
+  <text x="320" y="240" fill="#00e676" font-family="monospace" font-size="12" letter-spacing="1">840Wh DUAL-BAY</text>
+  <text x="628" y="332" fill="#7d8e8b" font-family="monospace" font-size="11">85 Nm CARGO</text>
+</svg>
