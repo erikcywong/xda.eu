@@ -97,6 +97,12 @@
         '<a href="' + base + 'bikes.html?category=urban"><strong>Urban</strong><span>Metro One & Strada Pro</span></a>' +
         '<a href="' + base + 'bikes.html?category=trekking"><strong>Trekking</strong><span>Horizon X</span></a>' +
         '<a href="' + base + 'bikes.html?category=cargo"><strong>Cargo</strong><span>Carrier LT</span></a></div></div>' +
+        '<div class="nav-item"><a class="nav-link" href="' + base + 'catalog.html">Full catalogue <span class="caret">▼</span></a><div class="dropdown">' +
+        '<a href="' + base + 'catalog.html"><strong>All 48 models</strong><span>Complete 2026 factory catalogue</span></a>' +
+        '<a href="' + base + 'catalog.html?category=motorcycle"><strong>Motorcycles</strong><span>4 models</span></a>' +
+        '<a href="' + base + 'catalog.html?category=scooter"><strong>Scooters</strong><span>28 models</span></a>' +
+        '<a href="' + base + 'catalog.html?category=tricycle"><strong>Tricycles</strong><span>8 models</span></a>' +
+        '<a href="' + base + 'catalog.html?category=bicycle"><strong>Bicycles</strong><span>8 models</span></a></div></div>' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'support.html#technology">Technology <span class="caret">▼</span></a><div class="dropdown">' +
         '<a href="' + base + 'support.html#eapc"><strong>UK EAPC rules</strong><span>250W · 15.5 mph assist</span></a>' +
         '<a href="' + base + 'support.html#battery"><strong>Battery & range</strong><span>Care and charging</span></a>' +
@@ -118,7 +124,7 @@
       foot.innerHTML =
         '<footer class="site-footer"><div class="container"><div class="footer-grid">' +
         '<div class="footer-brand"><a class="brand" href="' + base + 'index.html"><span class="brand-mark">x</span><span class="brand-name">XDAO</span></a><p>Manufactured in China. Engineered for British roads. Built for the next chapter of European mobility.</p><span class="badge badge-neutral">UK EAPC · 250W · 15.5 MPH</span></div>' +
-        '<div class="footer-col"><h4>Shop</h4><a href="' + base + 'bikes.html">All e-bikes</a><a href="' + base + 'bikes.html?category=urban">Urban bikes</a><a href="' + base + 'bikes.html?category=trekking">Trekking bikes</a><a href="' + base + 'bikes.html?category=cargo">Cargo bikes</a><a href="' + base + 'cart.html">Your basket</a></div>' +
+        '<div class="footer-col"><h4>Shop</h4><a href="' + base + 'bikes.html">All e-bikes</a><a href="' + base + 'catalog.html">Full 2026 catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a><a href="' + base + 'cart.html">Your basket</a></div>' +
         '<div class="footer-col"><h4>Company</h4><a href="' + base + 'trade.html">Trade & distribution</a><a href="' + base + 'eu.html">EU expansion</a><a href="' + base + 'support.html#technology">Technology</a><a href="' + base + 'support.html#service">Warranty & service</a></div>' +
         '<div class="footer-col"><h4>Support</h4><a href="' + base + 'support.html#delivery">Delivery & assembly</a><a href="' + base + 'support.html#eapc">Legal requirements</a><a href="' + base + 'support.html#faq">FAQ</a><a href="' + base + 'checkout.html">Checkout demo</a></div>' +
         '</div><div class="footer-bottom"><span>© <span id="footerYear"></span> XDAO Mobility. All rights reserved.</span><span>Indicative storefront concept · no live payments are processed.</span></div></div></footer>';
@@ -134,6 +140,7 @@
       panel.innerHTML =
         '<div class="mobile-panel-head"><span class="brand-name">XDAO</span><button class="menu-toggle" id="menuClose" aria-label="Close menu">✕</button></div>' +
         '<a href="' + base + 'index.html">Home</a><a href="' + base + 'bikes.html">All e-bikes</a>' +
+        '<a href="' + base + 'catalog.html">Full 2026 catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a>' +
         '<a href="' + base + 'bikes.html?category=urban">Urban</a><a href="' + base + 'bikes.html?category=trekking">Trekking</a>' +
         '<a href="' + base + 'bikes.html?category=cargo">Cargo</a><a href="' + base + 'trade.html">Trade & fleet</a>' +
         '<a href="' + base + 'eu.html">EU expansion</a><a href="' + base + 'support.html">Support</a><a href="' + base + 'cart.html">Basket</a>' +
