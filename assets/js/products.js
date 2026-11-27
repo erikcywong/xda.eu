@@ -1,5 +1,5 @@
-/* ZEBIKE catalogue data — derived from the supplied UK B2B specification sheet.
-   Retail prices are indicative launch RRP placeholders and must be confirmed before go-live. */
+/* ZEBIKE catalogue data — derived from the supplied global B2B specification sheet.
+   Retail prices are indicative launch RRP placeholders (USD base) and must be confirmed before go-live. */
 window.ZEBIKE_PRODUCTS = [
   {
     id: 'metro-one',
@@ -8,20 +8,19 @@ window.ZEBIKE_PRODUCTS = [
     series: 'Urban Series 01',
     category: 'urban',
     categoryLabel: 'Urban Commuter',
-    tagline: 'Step-through comfort for the daily British commute.',
+    tagline: 'Step-through comfort for the daily city commute.',
     description: 'A low-standover city bike with a high-rigid 6061 non-folding frame, torque-sensing rear hub drive and an integrated 504Wh battery. Built for wet roads, kerbs and stop-start city miles.',
     image: 'assets/images/metro-one.svg',
     photo: 'assets/images/metro-one-photo.jpg',
-    price: 1199,
-    oldPrice: 1399,
-    priceEUR: 1390,
+    priceUSD: 1499,
+    oldPriceUSD: 1699,
     fobUSD: 640,
-    ddpGBP: 565,
+    ddpUSD: 720,
     cbm: 0.45,
     moq: 30,
     container40: 148,
     badge: 'Urban favourite',
-    stock: 'In stock · UK warehouse',
+    stock: 'In stock · regional warehouse',
     specs: [
       ['Motor', '250W rear hub · 45 Nm torque sensor'],
       ['Battery', '36V 14Ah · 504Wh LG cells'],
@@ -32,7 +31,7 @@ window.ZEBIKE_PRODUCTS = [
       ['Tyres', 'CST 27.5" × 2.0" puncture protect'],
       ['Weight', '21.5 kg']
     ],
-    highlights: ['Low 410mm standover', 'Spanninga integrated LED lighting', 'IP67 waterproof harness', 'BS 1363 UK 3-pin charger'],
+    highlights: ['Low 410mm standover', 'Spanninga integrated LED lighting', 'IP67 waterproof harness', 'Region-specific charger included (UK / EU / US / AU)'],
     bestFor: 'Commuters, students and everyday errands'
   },
   {
@@ -46,16 +45,15 @@ window.ZEBIKE_PRODUCTS = [
     description: 'A lightweight 6061-T6 city machine built around a Gates carbon belt drive, dual-sensor 65 Nm hub motor and a 540Wh Samsung battery. Minimal maintenance, maximum weekday mileage.',
     image: 'assets/images/strada-pro.svg',
     photo: 'assets/images/strada-pro-photo.jpg',
-    price: 1499,
-    oldPrice: 1699,
-    priceEUR: 1738,
+    priceUSD: 1899,
+    oldPriceUSD: 2199,
     fobUSD: 790,
-    ddpGBP: 695,
+    ddpUSD: 885,
     cbm: 0.42,
     moq: 30,
     container40: 156,
     badge: 'Belt drive',
-    stock: 'In stock · UK warehouse',
+    stock: 'In stock · regional warehouse',
     specs: [
       ['Motor', '250W high-torque hub · 65 Nm dual sensor'],
       ['Battery', '36V 15Ah · 540Wh Samsung cells'],
@@ -66,7 +64,7 @@ window.ZEBIKE_PRODUCTS = [
       ['Tyres', 'WTB Horizon 700c × 40c'],
       ['Weight', '19.8 kg']
     ],
-    highlights: ['Gates carbon belt — no grease', 'Internal cable routing', 'OLED handlebar display', 'BS 1363 UK 3-pin charger'],
+    highlights: ['Gates carbon belt — no grease', 'Internal cable routing', 'OLED handlebar display', 'Region-specific charger included (UK / EU / US / AU)'],
     bestFor: 'Faster commutes and weekend fitness rides'
   },
   {
@@ -80,16 +78,15 @@ window.ZEBIKE_PRODUCTS = [
     description: 'A reinforced trekking frame, 80mm lockout air suspension and a 720Wh integrated battery make the Horizon X the choice for riders who cross city limits. Four-piston brakes and Schwalbe Marathon Plus tyres come standard.',
     image: 'assets/images/horizon-x.svg',
     photo: 'assets/images/horizon-x-photo.jpg',
-    price: 1849,
-    oldPrice: 2099,
-    priceEUR: 2144,
+    priceUSD: 2399,
+    oldPriceUSD: 2799,
     fobUSD: 960,
-    ddpGBP: 845,
+    ddpUSD: 1075,
     cbm: 0.52,
     moq: 25,
     container40: 126,
     badge: 'Longest range',
-    stock: 'Low stock · UK warehouse',
+    stock: 'Low stock · regional warehouse',
     specs: [
       ['Motor', '250W mid-drive · 80 Nm high torque'],
       ['Battery', '48V 15Ah · 720Wh LG pack'],
@@ -100,7 +97,7 @@ window.ZEBIKE_PRODUCTS = [
       ['Tyres', 'Schwalbe Marathon Plus 27.5" × 2.25"'],
       ['Weight', '24.2 kg']
     ],
-    highlights: ['80mm lockout air suspension', 'MIK rear rack · 27 kg load', 'Full mudguards included', 'BS 1363 UK 3-pin charger'],
+    highlights: ['80mm lockout air suspension', 'MIK rear rack · 27 kg load', 'Full mudguards included', 'Region-specific charger included (UK / EU / US / AU)'],
     bestFor: 'Touring, trail paths and all-weather utility'
   },
   {
@@ -114,16 +111,15 @@ window.ZEBIKE_PRODUCTS = [
     description: 'Built for deliveries, school runs and small business fleets. The Carrier LT pairs an 85 Nm cargo hub with an 840Wh dual-bay battery system, extended rear deck and four-piston cargo brakes.',
     image: 'assets/images/carrier-lt.svg',
     photo: 'assets/images/carrier-lt-photo.jpg',
-    price: 2099,
-    oldPrice: 2399,
-    priceEUR: 2434,
+    priceUSD: 2699,
+    oldPriceUSD: 3099,
     fobUSD: 1080,
-    ddpGBP: 950,
+    ddpUSD: 1210,
     cbm: 0.62,
     moq: 20,
     container40: 110,
     badge: '180 kg load',
-    stock: 'In stock · UK warehouse',
+    stock: 'In stock · regional warehouse',
     specs: [
       ['Motor', '250W cargo hub · 85 Nm high torque'],
       ['Battery', '48V 17.5Ah · 840Wh dual-bay ready'],
@@ -134,7 +130,7 @@ window.ZEBIKE_PRODUCTS = [
       ['Tyres', 'Innova 20" × 3.0" heavy cargo'],
       ['Weight', '28.5 kg']
     ],
-    highlights: ['Rear deck rated to 80 kg', 'Front basket mount', 'Integrated racks and footboards', 'BS 1363 UK 3-pin charger'],
+    highlights: ['Rear deck rated to 80 kg', 'Front basket mount', 'Integrated racks and footboards', 'Region-specific charger included (UK / EU / US / AU)'],
     bestFor: 'Delivery fleets, families and heavy cargo'
   }
 ];
