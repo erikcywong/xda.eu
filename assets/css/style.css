@@ -458,3 +458,27 @@ label.field > span { display: block; margin-bottom: 7px; font-size: 11px; font-w
   .catalog-grid { grid-template-columns: 1fr; }
   .model-quick { grid-template-columns: 1fr; }
 }
+
+
+/* Global partner network portal */
+.tier-card, .partner-card, .resource-card { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.tier-card p, .partner-card p, .resource-card p { color: var(--muted); font-size: 13px; }
+.feature-list li { position: relative; padding-left: 20px; font-size: 12px; color: var(--muted); }
+.feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); }
+.partner-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.partner-card h3 { margin: 14px 0 6px; font-family: var(--font-display); font-size: 18px; }
+.partner-city, .partner-meta { font-size: 11px; color: var(--muted-2); }
+.partner-meta { margin: 0; }
+.chip-row { margin-top: 14px; }
+.partner-foot { display: flex; justify-content: space-between; gap: 10px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+.resource-card { display: block; transition: transform .18s ease, border-color .18s ease; }
+.resource-card:hover { transform: translateY(-3px); border-color: var(--accent-line); }
+.resource-card h3 { margin: 16px 0 8px; font-family: var(--font-display); font-size: 17px; }
+.resource-card .accent { font-size: 12px; }
+.table-wrap { overflow-x: auto; margin-top: 16px; }
+.table-wrap table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table-wrap th, .table-wrap td { padding: 11px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+.table-wrap th { color: var(--muted-2); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.btn:disabled { opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+@media (max-width: 900px) { .partner-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .partner-grid { grid-template-columns: 1fr; } }

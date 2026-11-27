@@ -108,6 +108,11 @@
         '<a href="' + base + 'support.html#battery"><strong>Battery & range</strong><span>Care and charging</span></a>' +
         '<a href="' + base + 'support.html#service"><strong>Service & warranty</strong><span>UK support network</span></a></div></div>' +
         '<a class="nav-link" href="' + base + 'trade.html">Trade & fleet</a>' +
+        '<div class="nav-item"><a class="nav-link" href="' + base + 'network.html">Global network <span class="caret">▼</span></a><div class="dropdown">' +
+        '<a href="' + base + 'network.html#directory"><strong>Partner directory</strong><span>Find retailers and agents</span></a>' +
+        '<a href="' + base + 'network.html#service"><strong>Service desk</strong><span>Claims, parts and tickets</span></a>' +
+        '<a href="' + base + 'network.html#resources"><strong>Resource hub</strong><span>Catalogue and guides</span></a>' +
+        '<a href="' + base + 'network.html#apply"><strong>Become a partner</strong><span>Application and onboarding</span></a></div></div>' +
         '<a class="nav-link" href="' + base + 'support.html">Support</a>' +
         '</nav>' +
         '<div class="header-actions">' +
@@ -124,7 +129,7 @@
         '<footer class="site-footer"><div class="container"><div class="footer-grid">' +
         '<div class="footer-brand"><a class="brand" href="' + base + 'index.html"><span class="brand-mark">z</span><span class="brand-name">ZEBIKE</span></a><p>Manufactured in China. Engineered for British roads. Built for the next chapter of European mobility.</p><span class="badge badge-neutral">UK EAPC · 250W · 15.5 MPH</span></div>' +
         '<div class="footer-col"><h4>Shop</h4><a href="' + base + 'bikes.html">All e-bikes</a><a href="' + base + 'catalog.html">Catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a><a href="' + base + 'cart.html">Your basket</a></div>' +
-        '<div class="footer-col"><h4>Company</h4><a href="' + base + 'trade.html">Trade & distribution</a><a href="' + base + 'support.html#technology">Technology</a><a href="' + base + 'support.html#service">Warranty & service</a></div>' +
+        '<div class="footer-col"><h4>Company</h4><a href="' + base + 'trade.html">Trade & distribution</a><a href="' + base + 'network.html">Global network</a><a href="' + base + 'support.html#technology">Technology</a><a href="' + base + 'support.html#service">Warranty & service</a></div>' +
         '<div class="footer-col"><h4>Support</h4><a href="' + base + 'support.html#delivery">Delivery & assembly</a><a href="' + base + 'support.html#eapc">Legal requirements</a><a href="' + base + 'support.html#faq">FAQ</a><a href="' + base + 'checkout.html">Checkout demo</a></div>' +
         '</div><div class="footer-bottom"><span>© <span id="footerYear"></span> ZEBIKE Mobility. All rights reserved.</span><span>Indicative storefront concept · no live payments are processed.</span></div></div></footer>';
       const year = document.getElementById('footerYear');
@@ -142,6 +147,7 @@
         '<a href="' + base + 'catalog.html">Catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a>' +
         '<a href="' + base + 'bikes.html?category=urban">Urban</a><a href="' + base + 'bikes.html?category=trekking">Trekking</a>' +
         '<a href="' + base + 'bikes.html?category=cargo">Cargo</a><a href="' + base + 'trade.html">Trade & fleet</a>' +
+        '<a href="' + base + 'network.html">Global network</a><a href="' + base + 'network.html#directory">Partner directory</a><a href="' + base + 'network.html#service">Service desk</a>' +
         '<a href="' + base + 'support.html">Support</a><a href="' + base + 'cart.html">Basket</a>' +
         '<a class="btn btn-primary btn-block" href="' + base + 'bikes.html">Shop bikes</a>';
       document.body.appendChild(panel);

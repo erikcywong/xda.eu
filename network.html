@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZEBIKE global partner network portal for retailers, regional agents and service centres — directory, service desk, resources and onboarding.">
+  <title>Global Network | ZEBIKE Partners</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="siteHeaderMount"></div>
+  <main>
+    <section class="section-sm section-alt">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Global network</span></div>
+        <span class="eyebrow" style="display:block;margin-top:22px">Partner network</span>
+        <h1 style="font-size:clamp(38px,5vw,62px);margin-top:16px">One network. Local ownership.</h1>
+        <p class="lead" style="margin-top:14px;max-width:760px">A single operating layer for retailers, regional agents and service centres. Find a partner, raise a service request, reorder stock and access enablement material — by market and by role.</p>
+        <div class="notice notice-warn" style="margin-top:24px">Illustrative network data. Partner entries, stock levels and request forms are demo content — connect live partner records and a backend before launch.</div>
+        <div class="flex gap-12" style="margin-top:24px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-lg" href="#directory">Find a partner</a>
+          <a class="btn btn-lg" href="#apply">Apply to join</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Network at a glance</span><h2 class="section-title">Built for local execution.</h2></div>
+          <p>Commercial, technical and training capability distributed across the markets we serve — not held at a single head office.</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="mini-stat"><strong>18</strong><span>Markets</span></div>
+          <div class="mini-stat"><strong>64</strong><span>Partners</span></div>
+          <div class="mini-stat"><strong>31</strong><span>Service hubs</span></div>
+          <div class="mini-stat"><strong>48</strong><span>Models in catalogue</span></div>
+        </div>
+        <p class="form-note">Demo figures for layout preview only.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="tiers">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Partner types</span><h2 class="section-title">Three ways into the network.</h2></div>
+          <p>Access and responsibilities differ by role. Every tier shares the same catalogue, service standards and product data.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="tier-card">
+            <span class="badge">Retail</span>
+            <h3 style="margin-top:18px">Retail partner</h3>
+            <p>Sell and support bikes in-store. Handles demos, local leads, assembly and first-line customer contact.</p>
+            <ul class="feature-list"><li>Demo stock allocation</li><li>Lead referral tracking</li><li>Point-of-sale assets</li></ul>
+          </article>
+          <article class="tier-card">
+            <span class="badge">Territory</span>
+            <h3 style="margin-top:18px">Regional agent</h3>
+            <p>Owns a defined territory. Recruits dealers, manages distribution and coordinates local compliance.</p>
+            <ul class="feature-list"><li>Territory map and targets</li><li>Dealer onboarding tools</li><li>Price book access</li></ul>
+          </article>
+          <article class="tier-card">
+            <span class="badge">After-sales</span>
+            <h3 style="margin-top:18px">Service centre</h3>
+            <p>Certified workshop for warranty work, spare parts and technical escalation within its catchment.</p>
+            <ul class="feature-list"><li>Warranty claim workflow</li><li>Spare-parts ordering</li><li>Technical bulletins</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="directory">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Directory</span><h2 class="section-title">Find a partner.</h2></div>
+          <p>Search by city, market or capability. Filter by region and partner type to find the right local contact.</p>
+        </div>
+        <div class="filters">
+          <input class="input" type="search" data-network-search placeholder="Search city, market or capability" aria-label="Search partners">
+          <select class="select" data-network-region aria-label="Filter by region">
+            <option value="all">All regions</option>
+            <option value="uk">UK &amp; Ireland</option>
+            <option value="eu">Europe</option>
+            <option value="mena">Middle East</option>
+            <option value="apac">Asia-Pacific</option>
+          </select>
+          <select class="select" data-network-type aria-label="Filter by partner type">
+            <option value="all">All types</option>
+            <option value="retail">Retail partner</option>
+            <option value="agent">Regional agent</option>
+            <option value="service">Service centre</option>
+          </select>
+          <span class="pill" data-network-count>0 partners</span>
+        </div>
+        <div class="partner-grid" data-network-grid></div>
+        <p class="form-note">Entries are placeholders for layout review. No real company or contact details are published.</p>
+        <div class="text-center" style="margin-top:18px"><a class="btn btn-sm" href="#apply" data-network-correct>Suggest a correction</a></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="service">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Service desk</span><h2 class="section-title">One intake, three workflows.</h2></div>
+          <p>Warranty, spares and technical issues enter through one form and route to the correct team by request type.</p>
+        </div>
+        <div class="grid grid-2">
+          <form class="form-card" data-demo-form>
+            <h3>Raise a service request</h3>
+            <div class="form-grid">
+              <label>Partner ID<input class="input" name="partner" placeholder="e.g. RK-1042" required></label>
+              <label>Market<select class="select" name="market" required><option value="">Select market</option><option>United Kingdom</option><option>Germany</option><option>Netherlands</option><option>France</option><option>Other</option></select></label>
+              <label class="full">Request type<select class="select" name="type" required><option value="">Select request</option><option>Warranty claim</option><option>Spare-parts request</option><option>Technical ticket</option></select></label>
+              <label>Model<input class="input" name="model" placeholder="e.g. Metro One" required></label>
+              <label>Serial number<input class="input" name="serial" placeholder="Frame or battery serial"></label>
+              <label class="full">Issue description<textarea class="input" name="message" rows="4" placeholder="Fault, quantity needed or technical question" required></textarea></label>
+              <label>Urgency<select class="select" name="urgency"><option>Normal</option><option>High — rider waiting</option><option>Safety related</option></select></label>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top:20px">Submit request</button>
+            <p class="form-note">Demo form. No ticket is created and no message is sent.</p>
+          </form>
+          <div>
+            <div class="notice">Route by request type: warranty → after-sales lead; spares → parts desk; technical → engineering. Include model and serial to cut triage time.</div>
+            <div class="grid" style="margin-top:18px">
+              <div class="form-card"><h3>Warranty claim</h3><p>Frame, motor, battery and controller claims. Attach serial and proof of sale when the live system is connected.</p></div>
+              <div class="form-card"><h3>Spare parts</h3><p>Fast-moving items: brake pads, tubes, belts, chargers, sensors and display units.</p></div>
+              <div class="form-card"><h3>Technical ticket</h3><p>Diagnostic support, torque settings, firmware questions and escalation to engineering.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Enablement hub</span><h2 class="section-title">Ungated basics, gated depth.</h2></div>
+          <p>Public material stays open for evaluation. Commercial and training material moves behind partner login.</p>
+        </div>
+        <div class="grid grid-4">
+          <a class="resource-card" href="catalog.html"><span class="badge">Public</span><h3>2026 catalogue</h3><p>48 models across four categories, with original photos and printed specifications.</p><span class="accent">Browse →</span></a>
+          <a class="resource-card" href="trade.html"><span class="badge">Public</span><h3>Trade terms</h3><p>MOQ, FOB/DDP structure and the container planning calculator.</p><span class="accent">Open →</span></a>
+          <a class="resource-card" href="support.html#eapc"><span class="badge">Public</span><h3>UK EAPC guide</h3><p>Legal limits, charging and documentation for Great Britain.</p><span class="accent">Read →</span></a>
+          <a class="resource-card" href="support.html#service"><span class="badge">Public</span><h3>Warranty &amp; service</h3><p>Coverage, spare-parts allocation and service standards.</p><span class="accent">Read →</span></a>
+        </div>
+        <div class="notice" style="margin-top:22px">After login: price book, training library, marketing kit, claim history, stock visibility and territory targets.</div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="commercial">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Commercial desk</span><h2 class="section-title">Reorder without renegotiating.</h2></div>
+          <p>Standard models, standard terms. Use the trade calculator for an allocation, then submit a written quote request.</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="form-card">
+            <h3>Indicative stock position</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Model</th><th>Hub</th><th>Available</th><th>Lead time</th></tr></thead>
+                <tbody>
+                  <tr><td>Metro One</td><td>UK</td><td>120 units</td><td>7 days</td></tr>
+                  <tr><td>Strada Pro</td><td>UK</td><td>64 units</td><td>10 days</td></tr>
+                  <tr><td>Horizon X</td><td>NL</td><td>38 units</td><td>14 days</td></tr>
+                  <tr><td>Carrier LT</td><td>UK</td><td>22 units</td><td>21 days</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="form-note">Demo stock figures. Connect ERP/WMS for live availability.</p>
+            <a class="btn btn-primary" href="trade.html#tradeCalc" style="margin-top:18px">Open allocation calculator</a>
+          </div>
+          <div class="form-card">
+            <h3>Quote &amp; reorder route</h3>
+            <ul class="feature-list">
+              <li>Select model, quantity and destination market</li>
+              <li>Confirm Incoterm, duties and local homologation</li>
+              <li>Receive proforma invoice and lead time</li>
+              <li>Track container and spare-parts allocation</li>
+            </ul>
+            <div class="notice notice-warn" style="margin-top:18px">Prices in the trade calculator are source-catalog estimates. Confirm final commercial terms before issuing any invoice.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apply">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Onboarding</span><h2 class="section-title">Apply to join the network.</h2></div>
+          <p>Tell us your market, channel type and coverage. We route the enquiry to the regional desk for that territory.</p>
+        </div>
+        <div class="grid grid-2">
+          <form class="form-card" data-demo-form>
+            <h3>Partner application</h3>
+            <div class="form-grid">
+              <label>Company<input class="input" name="company" placeholder="Legal trading name" required></label>
+              <label>Market / country<input class="input" name="country" placeholder="e.g. Germany" required></label>
+              <label>Partner type<select class="select" name="type" required><option value="">Select type</option><option>Retail partner</option><option>Regional agent</option><option>Service centre</option></select></label>
+              <label>Website<input class="input" name="website" placeholder="https://"></label>
+              <label class="full">Contact name and email<input class="input" name="contact" placeholder="Name · email" required></label>
+              <label class="full">Coverage and capability<textarea class="input" name="message" rows="4" placeholder="Territory, stores, workshop capacity, existing brands" required></textarea></label>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top:20px">Send application</button>
+            <p class="form-note">Demo form. No application is stored or transmitted.</p>
+          </form>
+          <div class="grid">
+            <div class="form-card"><h3>01 · Enquiry</h3><p>We review territory coverage, channel fit and after-sales capability.</p></div>
+            <div class="form-card"><h3>02 · Review</h3><p>Regional desk confirms demand, compliance requirements and commercial terms.</p></div>
+            <div class="form-card"><h3>03 · Agreement</h3><p>Tier, territory, MOQ and service obligations are agreed in writing.</p></div>
+            <div class="form-card"><h3>04 · Enablement</h3><p>Account created, training assigned, demo stock and marketing assets released.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Access control</span>
+          <h2 style="margin-top:14px">Partner sign-in comes next.</h2>
+          <p>Public pages stay open. Verified partners will get tier-based access to the price book, live stock, claim history and training library.</p>
+          <button class="btn btn-lg" type="button" disabled>Partner sign-in · coming soon</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="siteFooterMount"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/network.js"></script>
+</body>
+</html>
