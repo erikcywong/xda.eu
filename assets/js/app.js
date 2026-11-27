@@ -4,22 +4,35 @@
 
   const PRODUCTS = window.ZEBIKE_PRODUCTS || [];
   const CART_KEY = 'xdao_cart_v1';
-  const CURRENCY_KEY = 'xdao_currency_v1';
-  let currency = localStorage.getItem(CURRENCY_KEY) || 'GBP';
+  const CURRENCY_KEY = 'zebike_currency_v1';
+  const CURRENCIES = {
+    USD: { symbol: '$', locale: 'en-US', rate: 1 },
+    EUR: { symbol: '€', locale: 'de-DE', rate: 0.93 },
+    GBP: { symbol: '£', locale: 'en-GB', rate: 0.79 },
+    AUD: { symbol: 'A$', locale: 'en-AU', rate: 1.52 },
+    AED: { symbol: 'AED ', locale: 'en-US', rate: 3.67 }
+  };
+  let currency = localStorage.getItem(CURRENCY_KEY) || 'USD';
+  if (!CURRENCIES[currency]) currency = 'USD';
 
   const getBase = () => (window.location.pathname.indexOf('/products/') > -1 ? '../' : '');
 
-  function money(value) {
-    if (currency === 'EUR') return '€' + Number(value).toLocaleString('de-DE');
-    return '£' + Number(value).toLocaleString('en-GB');
+  function convert(usd) {
+    const c = CURRENCIES[currency] || CURRENCIES.USD;
+    return Number(usd) * c.rate;
+  }
+
+  function money(usd) {
+    const c = CURRENCIES[currency] || CURRENCIES.USD;
+    return c.symbol + Math.round(Number(usd)).toLocaleString(c.locale);
   }
 
   function priceOf(product) {
-    return currency === 'EUR' ? product.priceEUR : product.price;
+    return Math.round(convert(product.priceUSD));
   }
 
   function oldPriceOf(product) {
-    return currency === 'EUR' ? Math.round(product.oldPrice * 1.16) : product.oldPrice;
+    return Math.round(convert(product.oldPriceUSD));
   }
 
   function productById(id) {
@@ -112,7 +125,7 @@
         '<a href="' + base + 'products/strada-pro.html"><strong>Strada Pro</strong><span>City performance · torque sensing</span></a>' +
         '<a href="' + base + 'products/horizon-x.html"><strong>Horizon X</strong><span>Trekking · all-road range</span></a>' +
         '<a href="' + base + 'products/carrier-lt.html"><strong>Carrier LT</strong><span>Cargo longtail · 180 kg</span></a>' +
-        '<a href="' + base + 'bikes.html"><strong>View all models</strong><span>Compare the full UK lineup</span></a></div></div>' +
+        '<a href="' + base + 'bikes.html"><strong>View all models</strong><span>Compare the full global lineup</span></a></div></div>' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'catalog.html">Catalogue <span class="caret">▼</span></a><div class="dropdown">' +
         '<a href="' + base + 'catalog.html"><strong>All 48 models</strong><span>Complete 2026 factory catalogue</span></a>' +
         '<a href="' + base + 'catalog.html?category=motorcycle"><strong>Motorcycles</strong><span>4 models</span></a>' +
@@ -121,9 +134,9 @@
         '<a href="' + base + 'catalog.html?category=bicycle"><strong>Bicycles</strong><span>8 models</span></a></div></div>' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'support.html#technology">Technology <span class="caret">▼</span></a><div class="dropdown">' +
         '<a href="' + base + 'support.html#technology"><strong>Technology overview</strong><span>Engineering and platform</span></a>' +
-        '<a href="' + base + 'support.html#eapc"><strong>UK EAPC rules</strong><span>250W · 15.5 mph assist</span></a>' +
+        '<a href="' + base + 'support.html#eapc"><strong>Regional compliance</strong><span>UK EAPC · EU EN15194 · US Class 1</span></a>' +
         '<a href="' + base + 'support.html#battery"><strong>Battery & range</strong><span>Care and charging</span></a>' +
-        '<a href="' + base + 'support.html#service"><strong>Service & warranty</strong><span>UK support network</span></a></div></div>' +
+        '<a href="' + base + 'support.html#service"><strong>Service & warranty</strong><span>Global partner network</span></a></div></div>' +
         '<a class="nav-link" href="' + base + 'trade.html">Trade & fleet</a>' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'network.html">Global network <span class="caret">▼</span></a><div class="dropdown">' +
         '<a href="https://zebike-stock.app.workbuddy.host/stock/?sharecode=36ZKOIJW4J" target="_blank" rel="noopener"><strong>Stock console</strong><span>Live partner inventory</span></a>' +
@@ -134,7 +147,7 @@
         '<a class="nav-link" href="' + base + 'support.html">Support</a>' +
         '</nav>' +
         '<div class="header-actions">' +
-        '<div class="currency-switch" aria-label="Currency selector"><button class="currency-btn" data-currency="GBP">£ GBP</button><button class="currency-btn" data-currency="EUR">€ EUR</button></div>' +
+        '<div class="currency-switch" aria-label="Currency selector"><button class="currency-btn" data-currency="USD">$ USD</button><button class="currency-btn" data-currency="EUR">€ EUR</button><button class="currency-btn" data-currency="GBP">£ GBP</button><button class="currency-btn" data-currency="AUD">A$ AUD</button><button class="currency-btn" data-currency="AED">AED</button></div>' +
         '<a class="cart-btn" href="' + base + 'cart.html">Basket <span class="cart-count" data-cart-count>0</span></a>' +
         '<a class="btn btn-primary btn-sm" href="' + base + 'bikes.html">Shop bikes</a>' +
         '<button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>' +
@@ -146,7 +159,7 @@
     if (foot) {
       foot.innerHTML =
         '<footer class="site-footer"><div class="container"><div class="footer-grid">' +
-        '<div class="footer-brand"><a class="brand" href="' + base + 'index.html"><span class="brand-mark">z</span><span class="brand-name">ZEBIKE</span></a><p>Manufactured in China. Engineered for British roads. Built for the next chapter of European mobility.</p><span class="badge badge-neutral">UK EAPC · 250W · 15.5 MPH</span></div>' +
+        '<div class="footer-brand"><a class="brand" href="' + base + 'index.html"><span class="brand-mark">z</span><span class="brand-name">ZEBIKE</span></a><p>Manufactured in China. Engineered for global roads. Built for the next chapter of clean mobility worldwide.</p><span class="badge badge-neutral">Compliance-ready · UK · EU · US · GCC · ANZ</span></div>' +
         '<div class="footer-col"><h4>Shop</h4><a href="' + base + 'bikes.html">All e-bikes</a><a href="' + base + 'catalog.html">Catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a><a href="' + base + 'cart.html">Your basket</a></div>' +
         '<div class="footer-col"><h4>Company</h4><a href="' + base + 'trade.html">Trade & distribution</a><a href="' + base + 'network.html">Global network</a><a href="' + base + 'support.html#technology">Technology</a><a href="' + base + 'support.html#service">Warranty & service</a></div>' +
         '<div class="footer-col"><h4>Support</h4><a href="' + base + 'support.html#delivery">Delivery & assembly</a><a href="' + base + 'support.html#eapc">Legal requirements</a><a href="' + base + 'support.html#faq">FAQ</a><a href="' + base + 'checkout.html">Checkout demo</a></div>' +
@@ -193,7 +206,7 @@
       '<div><span>Battery</span><strong>' + product.specs[1][1].split('·')[1].trim() + '</strong></div>' +
       '<div><span>Range</span><strong>' + product.specs[2][1].replace('Up to ', '') + '</strong></div></div>' +
       '<div class="product-foot"><div><span class="price" data-price-id="' + product.id + '">' + money(price) + '</span>' +
-      '<span class="price-old" data-oldprice-id="' + product.id + '">' + money(old) + '</span><span class="price-note">Indicative UK retail price</span></div>' +
+      '<span class="price-old" data-oldprice-id="' + product.id + '">' + money(old) + '</span><span class="price-note">Indicative retail price</span></div>' +
       '<div class="flex gap-8"><a class="btn btn-sm" href="' + getBase() + 'products/' + product.id + '.html">View</a>' +
       '<button class="btn btn-primary btn-sm" data-add-to-cart data-product-id="' + product.id + '" data-qty="1">Add</button></div></div></div></article>';
   }
@@ -266,14 +279,14 @@
       '<button class="option-chip active" data-option="colour">Graphite</button><button class="option-chip" data-option="colour">Emerald</button><button class="option-chip" data-option="colour">Silver</button></div></div>' +
       '<div class="option-group" data-product-id="' + product.id + '"><span>Quantity</span><div class="qty-row"><div class="qty-control">' +
       '<button type="button" data-qty-change="-1">−</button><input data-qty value="1" min="1" max="20"><button type="button" data-qty-change="1">+</button></div>' +
-      '<span class="muted" style="font-size:12px">Free UK mainland delivery</span></div></div>' +
+      '<span class="muted" style="font-size:12px">Global delivery via regional partners</span></div></div>' +
       '<div class="detail-actions"><button class="btn btn-primary btn-lg" data-add-to-cart data-product-id="' + product.id + '">Add to basket · ' + money(priceOf(product)) + '</button>' +
       '<a class="btn btn-lg" href="' + getBase() + 'trade.html">Fleet pricing</a></div>' +
-      '<div class="detail-assurance"><div><strong>2-year warranty</strong>Frame, motor, battery & controller</div><div><strong>30-day returns</strong>Unused, original packaging</div><div><strong>UK EAPC legal</strong>250W · 15.5 mph assist</div><div><strong>Assembly guide</strong>85% assembled on arrival</div></div>' +
+      '<div class="detail-assurance"><div><strong>2-year warranty</strong>Frame, motor, battery & controller</div><div><strong>30-day returns</strong>Unused, original packaging</div><div><strong>Compliance-ready</strong>Configured for your market</div><div><strong>Assembly guide</strong>85% assembled on arrival</div></div>' +
       '</div></div>' +
-      '<div class="section" id="specSection"><div class="grid grid-2"><div><span class="eyebrow">Technical specification</span><h2 style="margin-top:14px">Built to the spec. No shortcuts.</h2><p style="margin-top:12px">Best for ' + product.bestFor.toLowerCase() + '. All figures taken from the ZEBIKE UK specification sheet.</p></div>' +
+      '<div class="section" id="specSection"><div class="grid grid-2"><div><span class="eyebrow">Technical specification</span><h2 style="margin-top:14px">Built to the spec. No shortcuts.</h2><p style="margin-top:12px">Best for ' + product.bestFor.toLowerCase() + '. All figures taken from the ZEBIKE global specification sheet.</p></div>' +
       '<div class="form-card"><table class="spec-table">' + specs + '</table></div></div></div>' +
-      '<div class="section section-alt" id="techSection"><div class="split"><div><span class="eyebrow">Why ZEBIKE</span><h2 style="margin-top:14px">China-manufactured. UK-calibrated.</h2><p class="lead" style="margin-top:14px">Non-folding architectures, IP67 harnesses and UK 3-pin charging come standard across the range.</p><div class="feature-list">' + highlights.replace(/<li>/g, '<div class="feature-item"><span class="feature-icon">✓</span><div><strong>').replace(/<\/li>/g, '</strong></div></div>') + '</div></div>' +
+      '<div class="section section-alt" id="techSection"><div class="split"><div><span class="eyebrow">Why ZEBIKE</span><h2 style="margin-top:14px">China-manufactured. Globally calibrated.</h2><p class="lead" style="margin-top:14px">Non-folding architectures, IP67 harnesses and region-specific charging come standard across the range.</p><div class="feature-list">' + highlights.replace(/<li>/g, '<div class="feature-item"><span class="feature-icon">✓</span><div><strong>').replace(/<\/li>/g, '</strong></div></div>') + '</div></div>' +
       '<div class="visual-panel"><img src="' + getBase() + product.image + '" alt="' + product.name + ' technical view"><div class="visual-panel-grid"><div class="mini-stat"><strong>0%</strong><span>Anti-dumping code 8100</span></div><div class="mini-stat"><strong>IP67</strong><span>Waterproof harness</span></div></div></div></div></div>';
   }
 
@@ -283,7 +296,7 @@
     if (!root) return;
     const lines = cartLines();
     if (!lines.length) {
-      root.innerHTML = '<div class="empty-state"><h3>Your basket is empty</h3><p>Explore the four-model ZEBIKE UK lineup and add your first bike.</p><a class="btn btn-primary" style="margin-top:20px" href="' + getBase() + 'bikes.html">Shop e-bikes</a></div>';
+      root.innerHTML = '<div class="empty-state"><h3>Your basket is empty</h3><p>Explore the four-model ZEBIKE global lineup and add your first bike.</p><a class="btn btn-primary" style="margin-top:20px" href="' + getBase() + 'bikes.html">Shop e-bikes</a></div>';
       return;
     }
     const items = lines.map(function (line) {
@@ -315,7 +328,7 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       if (!cartCount()) { toast('Your basket is empty'); return; }
-      const ref = 'ZEBIKE-UK-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+      const ref = 'ZEBIKE-ORD-' + Math.random().toString(36).slice(2, 8).toUpperCase();
       const modal = document.getElementById('confirmModal');
       const code = document.getElementById('confirmRef');
       if (code) code.textContent = ref;
@@ -351,13 +364,13 @@
         const qty = Math.max(0, parseInt(input.value, 10) || 0);
         if (!product) return;
         totalFob += qty * product.fobUSD;
-        totalDdp += qty * product.ddpGBP;
+        totalDdp += qty * (product.ddpUSD || Math.round(product.ddpGBP * 1.27));
         totalUnits += qty;
         totalCbm += qty * product.cbm;
       });
       if (fob) fob.textContent = '$' + totalFob.toLocaleString('en-US');
-      if (ddp) ddp.textContent = '£' + totalDdp.toLocaleString('en-GB');
-      if (units) units.textContent = totalUnits.toLocaleString('en-GB') + ' units';
+      if (ddp) ddp.textContent = money(totalDdp);
+      if (units) units.textContent = totalUnits.toLocaleString('en-US') + ' units';
       const pct = Math.min(100, Math.round(totalCbm / 70 * 100));
       if (bar) bar.style.width = pct + '%';
       if (label) label.textContent = pct + '% of 40\' HQ · ' + totalCbm.toFixed(1) + ' CBM';
@@ -440,7 +453,7 @@
         currency = currBtn.getAttribute('data-currency');
         localStorage.setItem(CURRENCY_KEY, currency);
         refresh();
-        toast(currency === 'EUR' ? 'Prices shown in EUR (indicative)' : 'Prices shown in GBP');
+        toast('Prices shown in ' + currency + ' (indicative)');
       }
     });
   }
