@@ -83,20 +83,36 @@
   }
 
   /* ---------- shared chrome ---------- */
+  function markActiveNav() {
+    const path = window.location.pathname;
+    let file = path.split('/').pop() || 'index.html';
+    const hash = window.location.hash;
+    if (path.indexOf('/products/') > -1 || file === 'cart.html' || file === 'checkout.html') file = 'bikes.html';
+    if (file === 'catalog-model.html') file = 'catalog.html';
+    document.querySelectorAll('.main-nav .nav-link').forEach(function (link) {
+      const href = link.getAttribute('href') || '';
+      const clean = href.replace(/^\.\//, '');
+      const target = clean.split('#')[0].split('?')[0].split('/').pop() || 'index.html';
+      const targetHash = clean.indexOf('#') > -1 ? clean.slice(clean.indexOf('#')) : '';
+      const match = target === file && (hash ? targetHash === hash : !targetHash);
+      link.classList.toggle('on', match);
+    });
+  }
+
   function renderChrome() {
     const base = getBase();
     const mount = document.getElementById('siteHeaderMount');
     if (mount) {
       mount.innerHTML =
-        '<div class="topbar"><div class="container"><span>UK-first delivery</span><span class="sep">/</span><span>2-year warranty</span><span class="sep">/</span><span>Free UK mainland delivery</span></div></div>' +
-        '<header class="site-header"><div class="container nav-wrap">' +
-        '<a class="brand" href="' + base + 'index.html" aria-label="ZEBIKE home"><span class="brand-mark">z</span><span class="brand-name">ZEBIKE</span><span class="brand-sub">Electric mobility</span></a>' +
+        '<header class="site-header"><div class="nav-wrap">' +
+        '<a class="brand" href="' + base + 'index.html" aria-label="ZEBIKE home"><span class="brand-mark">z</span><span class="brand-name">ZEBIKE</span></a>' +
         '<nav class="main-nav" aria-label="Main navigation">' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'bikes.html">Bikes <span class="caret">▼</span></a><div class="dropdown">' +
-        '<a href="' + base + 'bikes.html"><strong>All e-bikes</strong><span>Four UK EAPC models</span></a>' +
-        '<a href="' + base + 'bikes.html?category=urban"><strong>Urban</strong><span>Metro One & Strada Pro</span></a>' +
-        '<a href="' + base + 'bikes.html?category=trekking"><strong>Trekking</strong><span>Horizon X</span></a>' +
-        '<a href="' + base + 'bikes.html?category=cargo"><strong>Cargo</strong><span>Carrier LT</span></a></div></div>' +
+        '<a href="' + base + 'products/metro-one.html"><strong>Metro One</strong><span>Urban commuter · 504 Wh</span></a>' +
+        '<a href="' + base + 'products/strada-pro.html"><strong>Strada Pro</strong><span>City performance · torque sensing</span></a>' +
+        '<a href="' + base + 'products/horizon-x.html"><strong>Horizon X</strong><span>Trekking · all-road range</span></a>' +
+        '<a href="' + base + 'products/carrier-lt.html"><strong>Carrier LT</strong><span>Cargo longtail · 180 kg</span></a>' +
+        '<a href="' + base + 'bikes.html"><strong>View all models</strong><span>Compare the full UK lineup</span></a></div></div>' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'catalog.html">Catalogue <span class="caret">▼</span></a><div class="dropdown">' +
         '<a href="' + base + 'catalog.html"><strong>All 48 models</strong><span>Complete 2026 factory catalogue</span></a>' +
         '<a href="' + base + 'catalog.html?category=motorcycle"><strong>Motorcycles</strong><span>4 models</span></a>' +
@@ -104,6 +120,7 @@
         '<a href="' + base + 'catalog.html?category=tricycle"><strong>Tricycles</strong><span>8 models</span></a>' +
         '<a href="' + base + 'catalog.html?category=bicycle"><strong>Bicycles</strong><span>8 models</span></a></div></div>' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'support.html#technology">Technology <span class="caret">▼</span></a><div class="dropdown">' +
+        '<a href="' + base + 'support.html#technology"><strong>Technology overview</strong><span>Engineering and platform</span></a>' +
         '<a href="' + base + 'support.html#eapc"><strong>UK EAPC rules</strong><span>250W · 15.5 mph assist</span></a>' +
         '<a href="' + base + 'support.html#battery"><strong>Battery & range</strong><span>Care and charging</span></a>' +
         '<a href="' + base + 'support.html#service"><strong>Service & warranty</strong><span>UK support network</span></a></div></div>' +
@@ -121,6 +138,7 @@
         '<a class="btn btn-primary btn-sm" href="' + base + 'bikes.html">Shop bikes</a>' +
         '<button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>' +
         '</div></div></header>';
+      markActiveNav();
     }
 
     const foot = document.getElementById('siteFooterMount');
