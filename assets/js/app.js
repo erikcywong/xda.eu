@@ -126,6 +126,7 @@
         '<a href="' + base + 'support.html#service"><strong>Service & warranty</strong><span>UK support network</span></a></div></div>' +
         '<a class="nav-link" href="' + base + 'trade.html">Trade & fleet</a>' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'network.html">Global network <span class="caret">▼</span></a><div class="dropdown">' +
+        '<a href="https://zebike-stock.app.workbuddy.host/stock/?sharecode=36ZKOIJW4J" target="_blank" rel="noopener"><strong>Stock console</strong><span>Live partner inventory</span></a>' +
         '<a href="' + base + 'network.html#directory"><strong>Partner directory</strong><span>Find retailers and agents</span></a>' +
         '<a href="' + base + 'network.html#service"><strong>Service desk</strong><span>Claims, parts and tickets</span></a>' +
         '<a href="' + base + 'network.html#resources"><strong>Resource hub</strong><span>Catalogue and guides</span></a>' +
