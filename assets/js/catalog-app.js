@@ -1,8 +1,8 @@
-/* XDAO full catalogue — category / model browser */
+/* ZEBIKE full catalogue — category / model browser */
 (function () {
   'use strict';
 
-  const MODELS = window.XDAO_CATALOG || [];
+  const MODELS = window.ZEBIKE_CATALOG || [];
   const CATS = [
     { key: 'all', label: 'All models', note: '48 models across 4 categories' },
     { key: 'motorcycle', label: 'Electric Motorcycle', note: '4 high-power two-wheelers' },
@@ -81,12 +81,12 @@
     const same = MODELS.filter((x) => x.category === m.category && x.id !== m.id).slice(0, 4);
     const rows = m.specs.map((s) => '<tr><th>' + esc(s[0]) + '</th><td>' + esc(s[1]) + '</td></tr>').join('');
     root.innerHTML =
-      '<div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="catalog.html">Full catalogue</a><span>/</span>' +
+      '<div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="catalog.html">Catalogue</a><span>/</span>' +
       '<a href="catalog.html?category=' + m.category + '">' + esc(m.categoryLabel) + '</a><span>/</span><span>' + esc(m.name) + '</span></div>' +
       '<div class="model-hero"><div class="model-image"><img src="' + m.image + '" alt="' + esc(m.name) + '">' +
       '<span class="model-page-tag">Original catalogue page ' + String(m.page).padStart(2, '0') + '</span></div>' +
       '<div class="model-info"><span class="eyebrow">' + esc(m.categoryLabel) + ' · 2026</span><h1>' + esc(m.name) + '</h1>' +
-      '<p class="lead">Factory specification as printed in the XDAO 2026 catalogue. No retail price is listed in the source document — use the trade enquiry channel for quotation.</p>' +
+      '<p class="lead">Factory specification as printed in the ZEBIKE 2026 catalogue. No retail price is listed in the source document — use the trade enquiry channel for quotation.</p>' +
       '<div class="model-actions"><a class="btn btn-primary" href="trade.html">Request a quotation</a>' +
       '<a class="btn" href="assets/catalog/xdao-2026-catalog.pdf" target="_blank" rel="noopener">Download full PDF</a></div>' +
       '<div class="model-quick"><div><strong>' + esc(specValue(m, ['motor'])) + '</strong><span>Motor</span></div>' +
@@ -100,7 +100,7 @@
       '<a class="btn btn-block" style="margin-top:18px" href="catalog.html?category=' + m.category + '">All ' + esc(m.categoryLabel) + ' models →</a></aside></div>' +
       '<div class="model-nav"><a href="catalog-model.html?id=' + encodeURIComponent(prev.id) + '">← ' + esc(prev.name) + '</a>' +
       '<a href="catalog.html">Back to catalogue</a><a href="catalog-model.html?id=' + encodeURIComponent(next.id) + '">' + esc(next.name) + ' →</a></div>';
-    document.title = m.name + ' | XDAO 2026 Catalogue';
+    document.title = m.name + ' | ZEBIKE 2026 Catalogue';
   }
 
   function init() {

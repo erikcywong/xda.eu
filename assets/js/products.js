@@ -1,9 +1,9 @@
-/* XDAO catalogue data — derived from the supplied UK B2B specification sheet.
+/* ZEBIKE catalogue data — derived from the supplied UK B2B specification sheet.
    Retail prices are indicative launch RRP placeholders and must be confirmed before go-live. */
-window.XDAO_PRODUCTS = [
+window.ZEBIKE_PRODUCTS = [
   {
     id: 'metro-one',
-    name: 'XDAO Metro One',
+    name: 'ZEBIKE Metro One',
     short: 'Metro One',
     series: 'Urban Series 01',
     category: 'urban',
@@ -37,7 +37,7 @@ window.XDAO_PRODUCTS = [
   },
   {
     id: 'strada-pro',
-    name: 'XDAO Strada Pro',
+    name: 'ZEBIKE Strada Pro',
     short: 'Strada Pro',
     series: 'Urban Fitness 02',
     category: 'urban',
@@ -71,7 +71,7 @@ window.XDAO_PRODUCTS = [
   },
   {
     id: 'horizon-x',
-    name: 'XDAO Horizon X',
+    name: 'ZEBIKE Horizon X',
     short: 'Horizon X',
     series: 'Trekking / SUV 03',
     category: 'trekking',
@@ -105,7 +105,7 @@ window.XDAO_PRODUCTS = [
   },
   {
     id: 'carrier-lt',
-    name: 'XDAO Carrier LT',
+    name: 'ZEBIKE Carrier LT',
     short: 'Carrier LT',
     series: 'Cargo & Fleet 04',
     category: 'cargo',
@@ -139,7 +139,7 @@ window.XDAO_PRODUCTS = [
   }
 ];
 
-window.XDAO_CATEGORY_LABELS = {
+window.ZEBIKE_CATEGORY_LABELS = {
   all: 'All bikes',
   urban: 'Urban',
   trekking: 'Trekking',

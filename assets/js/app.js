@@ -1,8 +1,8 @@
-/* XDAO storefront — shared chrome, catalogue rendering, cart and demo checkout */
+/* ZEBIKE storefront — shared chrome, catalogue rendering, cart and demo checkout */
 (function () {
   'use strict';
 
-  const PRODUCTS = window.XDAO_PRODUCTS || [];
+  const PRODUCTS = window.ZEBIKE_PRODUCTS || [];
   const CART_KEY = 'xdao_cart_v1';
   const CURRENCY_KEY = 'xdao_currency_v1';
   let currency = localStorage.getItem(CURRENCY_KEY) || 'GBP';
@@ -88,16 +88,16 @@
     const mount = document.getElementById('siteHeaderMount');
     if (mount) {
       mount.innerHTML =
-        '<div class="topbar"><div class="container"><span>UK-first delivery · EU rollout next</span><span class="sep">/</span><span>2-year warranty</span><span class="sep">/</span><span>Free UK mainland delivery</span></div></div>' +
+        '<div class="topbar"><div class="container"><span>UK-first delivery</span><span class="sep">/</span><span>2-year warranty</span><span class="sep">/</span><span>Free UK mainland delivery</span></div></div>' +
         '<header class="site-header"><div class="container nav-wrap">' +
-        '<a class="brand" href="' + base + 'index.html" aria-label="XDAO home"><span class="brand-mark">x</span><span class="brand-name">XDAO</span><span class="brand-sub">Electric mobility</span></a>' +
+        '<a class="brand" href="' + base + 'index.html" aria-label="ZEBIKE home"><span class="brand-mark">z</span><span class="brand-name">ZEBIKE</span><span class="brand-sub">Electric mobility</span></a>' +
         '<nav class="main-nav" aria-label="Main navigation">' +
         '<div class="nav-item"><a class="nav-link" href="' + base + 'bikes.html">Bikes <span class="caret">▼</span></a><div class="dropdown">' +
         '<a href="' + base + 'bikes.html"><strong>All e-bikes</strong><span>Four UK EAPC models</span></a>' +
         '<a href="' + base + 'bikes.html?category=urban"><strong>Urban</strong><span>Metro One & Strada Pro</span></a>' +
         '<a href="' + base + 'bikes.html?category=trekking"><strong>Trekking</strong><span>Horizon X</span></a>' +
         '<a href="' + base + 'bikes.html?category=cargo"><strong>Cargo</strong><span>Carrier LT</span></a></div></div>' +
-        '<div class="nav-item"><a class="nav-link" href="' + base + 'catalog.html">Full catalogue <span class="caret">▼</span></a><div class="dropdown">' +
+        '<div class="nav-item"><a class="nav-link" href="' + base + 'catalog.html">Catalogue <span class="caret">▼</span></a><div class="dropdown">' +
         '<a href="' + base + 'catalog.html"><strong>All 48 models</strong><span>Complete 2026 factory catalogue</span></a>' +
         '<a href="' + base + 'catalog.html?category=motorcycle"><strong>Motorcycles</strong><span>4 models</span></a>' +
         '<a href="' + base + 'catalog.html?category=scooter"><strong>Scooters</strong><span>28 models</span></a>' +
@@ -108,7 +108,6 @@
         '<a href="' + base + 'support.html#battery"><strong>Battery & range</strong><span>Care and charging</span></a>' +
         '<a href="' + base + 'support.html#service"><strong>Service & warranty</strong><span>UK support network</span></a></div></div>' +
         '<a class="nav-link" href="' + base + 'trade.html">Trade & fleet</a>' +
-        '<a class="nav-link" href="' + base + 'eu.html">EU expansion</a>' +
         '<a class="nav-link" href="' + base + 'support.html">Support</a>' +
         '</nav>' +
         '<div class="header-actions">' +
@@ -123,11 +122,11 @@
     if (foot) {
       foot.innerHTML =
         '<footer class="site-footer"><div class="container"><div class="footer-grid">' +
-        '<div class="footer-brand"><a class="brand" href="' + base + 'index.html"><span class="brand-mark">x</span><span class="brand-name">XDAO</span></a><p>Manufactured in China. Engineered for British roads. Built for the next chapter of European mobility.</p><span class="badge badge-neutral">UK EAPC · 250W · 15.5 MPH</span></div>' +
-        '<div class="footer-col"><h4>Shop</h4><a href="' + base + 'bikes.html">All e-bikes</a><a href="' + base + 'catalog.html">Full 2026 catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a><a href="' + base + 'cart.html">Your basket</a></div>' +
-        '<div class="footer-col"><h4>Company</h4><a href="' + base + 'trade.html">Trade & distribution</a><a href="' + base + 'eu.html">EU expansion</a><a href="' + base + 'support.html#technology">Technology</a><a href="' + base + 'support.html#service">Warranty & service</a></div>' +
+        '<div class="footer-brand"><a class="brand" href="' + base + 'index.html"><span class="brand-mark">z</span><span class="brand-name">ZEBIKE</span></a><p>Manufactured in China. Engineered for British roads. Built for the next chapter of European mobility.</p><span class="badge badge-neutral">UK EAPC · 250W · 15.5 MPH</span></div>' +
+        '<div class="footer-col"><h4>Shop</h4><a href="' + base + 'bikes.html">All e-bikes</a><a href="' + base + 'catalog.html">Catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a><a href="' + base + 'cart.html">Your basket</a></div>' +
+        '<div class="footer-col"><h4>Company</h4><a href="' + base + 'trade.html">Trade & distribution</a><a href="' + base + 'support.html#technology">Technology</a><a href="' + base + 'support.html#service">Warranty & service</a></div>' +
         '<div class="footer-col"><h4>Support</h4><a href="' + base + 'support.html#delivery">Delivery & assembly</a><a href="' + base + 'support.html#eapc">Legal requirements</a><a href="' + base + 'support.html#faq">FAQ</a><a href="' + base + 'checkout.html">Checkout demo</a></div>' +
-        '</div><div class="footer-bottom"><span>© <span id="footerYear"></span> XDAO Mobility. All rights reserved.</span><span>Indicative storefront concept · no live payments are processed.</span></div></div></footer>';
+        '</div><div class="footer-bottom"><span>© <span id="footerYear"></span> ZEBIKE Mobility. All rights reserved.</span><span>Indicative storefront concept · no live payments are processed.</span></div></div></footer>';
       const year = document.getElementById('footerYear');
       if (year) year.textContent = new Date().getFullYear();
     }
@@ -138,12 +137,12 @@
       panel.className = 'mobile-panel';
       panel.id = 'mobilePanel';
       panel.innerHTML =
-        '<div class="mobile-panel-head"><span class="brand-name">XDAO</span><button class="menu-toggle" id="menuClose" aria-label="Close menu">✕</button></div>' +
+        '<div class="mobile-panel-head"><span class="brand-name">ZEBIKE</span><button class="menu-toggle" id="menuClose" aria-label="Close menu">✕</button></div>' +
         '<a href="' + base + 'index.html">Home</a><a href="' + base + 'bikes.html">All e-bikes</a>' +
-        '<a href="' + base + 'catalog.html">Full 2026 catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a>' +
+        '<a href="' + base + 'catalog.html">Catalogue</a><a href="' + base + 'catalog.html?category=motorcycle">Motorcycles</a><a href="' + base + 'catalog.html?category=scooter">Scooters</a><a href="' + base + 'catalog.html?category=tricycle">Tricycles</a><a href="' + base + 'catalog.html?category=bicycle">Bicycles</a>' +
         '<a href="' + base + 'bikes.html?category=urban">Urban</a><a href="' + base + 'bikes.html?category=trekking">Trekking</a>' +
         '<a href="' + base + 'bikes.html?category=cargo">Cargo</a><a href="' + base + 'trade.html">Trade & fleet</a>' +
-        '<a href="' + base + 'eu.html">EU expansion</a><a href="' + base + 'support.html">Support</a><a href="' + base + 'cart.html">Basket</a>' +
+        '<a href="' + base + 'support.html">Support</a><a href="' + base + 'cart.html">Basket</a>' +
         '<a class="btn btn-primary btn-block" href="' + base + 'bikes.html">Shop bikes</a>';
       document.body.appendChild(panel);
     }
@@ -194,7 +193,7 @@
 
     const params = new URLSearchParams(window.location.search);
     const initial = params.get('category');
-    if (initial && XDAO_CATEGORY_LABELS[initial]) active = initial;
+    if (initial && ZEBIKE_CATEGORY_LABELS[initial]) active = initial;
 
     function render() {
       const term = (search && search.value || '').toLowerCase().trim();
@@ -247,9 +246,9 @@
       '<a class="btn btn-lg" href="' + getBase() + 'trade.html">Fleet pricing</a></div>' +
       '<div class="detail-assurance"><div><strong>2-year warranty</strong>Frame, motor, battery & controller</div><div><strong>30-day returns</strong>Unused, original packaging</div><div><strong>UK EAPC legal</strong>250W · 15.5 mph assist</div><div><strong>Assembly guide</strong>85% assembled on arrival</div></div>' +
       '</div></div>' +
-      '<div class="section" id="specSection"><div class="grid grid-2"><div><span class="eyebrow">Technical specification</span><h2 style="margin-top:14px">Built to the spec. No shortcuts.</h2><p style="margin-top:12px">Best for ' + product.bestFor.toLowerCase() + '. All figures taken from the XDAO UK specification sheet.</p></div>' +
+      '<div class="section" id="specSection"><div class="grid grid-2"><div><span class="eyebrow">Technical specification</span><h2 style="margin-top:14px">Built to the spec. No shortcuts.</h2><p style="margin-top:12px">Best for ' + product.bestFor.toLowerCase() + '. All figures taken from the ZEBIKE UK specification sheet.</p></div>' +
       '<div class="form-card"><table class="spec-table">' + specs + '</table></div></div></div>' +
-      '<div class="section section-alt" id="techSection"><div class="split"><div><span class="eyebrow">Why XDAO</span><h2 style="margin-top:14px">China-manufactured. UK-calibrated.</h2><p class="lead" style="margin-top:14px">Non-folding architectures, IP67 harnesses and UK 3-pin charging come standard across the range.</p><div class="feature-list">' + highlights.replace(/<li>/g, '<div class="feature-item"><span class="feature-icon">✓</span><div><strong>').replace(/<\/li>/g, '</strong></div></div>') + '</div></div>' +
+      '<div class="section section-alt" id="techSection"><div class="split"><div><span class="eyebrow">Why ZEBIKE</span><h2 style="margin-top:14px">China-manufactured. UK-calibrated.</h2><p class="lead" style="margin-top:14px">Non-folding architectures, IP67 harnesses and UK 3-pin charging come standard across the range.</p><div class="feature-list">' + highlights.replace(/<li>/g, '<div class="feature-item"><span class="feature-icon">✓</span><div><strong>').replace(/<\/li>/g, '</strong></div></div>') + '</div></div>' +
       '<div class="visual-panel"><img src="' + getBase() + product.image + '" alt="' + product.name + ' technical view"><div class="visual-panel-grid"><div class="mini-stat"><strong>0%</strong><span>Anti-dumping code 8100</span></div><div class="mini-stat"><strong>IP67</strong><span>Waterproof harness</span></div></div></div></div></div>';
   }
 
@@ -259,7 +258,7 @@
     if (!root) return;
     const lines = cartLines();
     if (!lines.length) {
-      root.innerHTML = '<div class="empty-state"><h3>Your basket is empty</h3><p>Explore the four-model XDAO UK lineup and add your first bike.</p><a class="btn btn-primary" style="margin-top:20px" href="' + getBase() + 'bikes.html">Shop e-bikes</a></div>';
+      root.innerHTML = '<div class="empty-state"><h3>Your basket is empty</h3><p>Explore the four-model ZEBIKE UK lineup and add your first bike.</p><a class="btn btn-primary" style="margin-top:20px" href="' + getBase() + 'bikes.html">Shop e-bikes</a></div>';
       return;
     }
     const items = lines.map(function (line) {
@@ -291,7 +290,7 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       if (!cartCount()) { toast('Your basket is empty'); return; }
-      const ref = 'XDAO-UK-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+      const ref = 'ZEBIKE-UK-' + Math.random().toString(36).slice(2, 8).toUpperCase();
       const modal = document.getElementById('confirmModal');
       const code = document.getElementById('confirmRef');
       if (code) code.textContent = ref;
